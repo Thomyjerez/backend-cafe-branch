@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import cors from 'cors'
 import path from 'path'
+import './routes/database'
 
 // crear una instancia de express
 // app tiene todas las propiedades de express
@@ -31,6 +32,6 @@ app.use(express.static(path.join(__dirname,'../public')))
 
 // rutas: nombre de dominio + ----
 // http://localhost:4000/prueba
-app.get('/prueba',(req,res)=>{
+app.get('/productos',(req,res)=>{
     res.send('Esto es una prueba de la peticion GET')
-})
+}) 
