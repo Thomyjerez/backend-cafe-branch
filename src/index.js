@@ -3,6 +3,7 @@ import morgan from "morgan";
 import cors from 'cors'
 import path from 'path'
 import './routes/database'
+import productosRouter from "./routes/productos.routes";
 
 // crear una instancia de express
 // app tiene todas las propiedades de express
@@ -32,6 +33,6 @@ app.use(express.static(path.join(__dirname,'../public')))
 
 // rutas: nombre de dominio + ----
 // http://localhost:4000/prueba
-app.get('/productos',(req,res)=>{
-    res.send('Esto es una prueba de la peticion GET')
-}) 
+// http://localhost:3000/administrador
+// http://localhost:3000/administrador/crear
+app.use('/apicafe', productosRouter)
