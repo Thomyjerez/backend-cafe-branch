@@ -7,6 +7,11 @@ router.route('/productos')
     .get(listarProductos)
     .post(crearProducto)
 
+router.route('/productos/:id')
+// .get()
+// .put()
+// .delete()
+
 export default router;
 
 

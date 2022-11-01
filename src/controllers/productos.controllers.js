@@ -11,7 +11,7 @@ export const listarProductos = async(req,res)=>{
      } catch(error) {
          console.log(error)
          res.status(404).json({
-             mensaje:'Error al intentar buscar los productos'
+             mensaje:'Error al intentar buscar los productospo0iug'
          })
      }
 }
@@ -22,6 +22,7 @@ export const crearProducto = async(req,res)=>{
        console.log(req.body)
        
        // agregar la validacion correspondiente
+      // siempre validar los datos en el body 
        
        const productoNuevo = new Producto(req.body);
        // guardar el producto en la base de datos
